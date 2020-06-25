@@ -26,10 +26,8 @@ class TransactionsRepository {
   public getBalance(): Balance {
     
     const { income, outcome} = this.transactions.reduce((v: Balance, t: Transaction) => {
-      if (t.type === 'income'){
+      if (t.type === t.type){
         v.income += t.value;
-      }else {
-        v.outcome += t.value;
       }
       return v;
     },{
